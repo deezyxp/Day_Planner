@@ -16,22 +16,24 @@ function renderCalendar() {
       }
   
     //   Display timeblocks for working hours 9-5
-      for (i = 0; i < workHours.length; i++) {
+      for (var i = 0; i < workHours.length; i++) {
         let row = $("<div>").addClass("row");
         let timeCol = $("<text-area>").text(workHours[i]).addClass("hour");
         let inputCol = $("<input>").attr("placeholder", "Enter note here").addClass("time-block");
 
-        moment('9AM')
         const currentTimeblockMoment = moment(workHours[i], 'hA');
         if(  moment() < currentTimeblockMoment ){
           // past
           inputCol = inputCol.addClass('past')
         }
+
         if ( currentTimeblockMoment < moment() <  currentTimeblockMoment.clone().add(1, 'hours') ) {
           // current
           // we should put in current colour
           
         }
+
+
 
         saveBtn = $("<button>").addClass("btn btn-primary saveBtn").text("SAVE");
         $(row).append(timeCol).append(inputCol).append(saveBtn);
