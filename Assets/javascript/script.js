@@ -1,9 +1,11 @@
+// Function to create our calendar page
 function renderCalendar() {
   $(document).ready(function () {
       let momentVar = moment().format('dddd, MMMM Do, YYYY h:mm a');
       let workHours = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM",
         "5PM"]
   
+        // countdown timer 
       setInterval(() => {
         let realTime = moment().format('dddd, MMMM Do, YYYY h:mm:ss a');
         $("#currentDay").text(realTime);
@@ -22,15 +24,22 @@ function renderCalendar() {
         let inputCol = $("<input>").attr("placeholder", "Enter note here").addClass("time-block");
 
         const currentTimeblockMoment = moment(workHours[i], 'hA');
+
         if(  moment() < currentTimeblockMoment ){
           // past
           inputCol = inputCol.addClass('past')
+
         }
 
         if ( currentTimeblockMoment < moment() <  currentTimeblockMoment.clone().add(1, 'hours') ) {
           // current
           // we should put in current colour
-          
+          inputCol = inputCol.addClass('present')
+        }
+
+        if(  moment() > currentTimeblockMoment ){
+          // present
+          inputCol = inputCol.addClass('future')
         }
 
 
