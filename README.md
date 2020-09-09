@@ -5,3 +5,5 @@ This calendar is designed to allow users to save events by typing in the input a
 Link to Repository: https://github.com/deezyxp/Day_Planner.io
 
 Link to Website: https://deezyxp.github.io/Day_Planner.io/.
+
+<img src = "Assets/Images/DayPlanner.PNG" alt="Screenshot">
