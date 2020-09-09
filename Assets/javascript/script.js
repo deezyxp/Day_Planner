@@ -25,20 +25,19 @@ function renderCalendar() {
 
         const currentTimeblockMoment = moment(workHours[i], 'hA');
 
-        if(  moment() < currentTimeblockMoment ){
+        if(  currentTimeblockMoment < moment() && currentTimeblockMoment.clone().add(1, 'hA') < moment() ){
           // past
           inputCol = inputCol.addClass('past')
-
         }
 
-        if ( currentTimeblockMoment < moment() <  currentTimeblockMoment.clone().add(1, 'hours') ) {
-          // current
+        if ( currentTimeblockMoment < moment() <  currentTimeblockMoment.clone().add(1, 'hA') ) {
+          // present
           // we should put in current colour
           inputCol = inputCol.addClass('present')
         }
 
-        if(  moment() > currentTimeblockMoment ){
-          // present
+        if(  moment() < currentTimeblockMoment ){
+          // future
           inputCol = inputCol.addClass('future')
         }
 
