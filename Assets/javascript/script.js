@@ -21,7 +21,7 @@ function renderCalendar() {
       for (var i = 0; i < workHours.length; i++) {
         let row = $("<div>").addClass("row");
         let timeCol = $("<text-area>").text(workHours[i]).addClass("hour");
-        let inputCol = $("<input>").attr("placeholder", "Enter note here").addClass("time-block");
+        let inputCol = $("<input>").attr("placeholder", "Enter note here").addClass("time-block input-area");
         const currentTimeblockMoment = moment(workHours[i], 'hA');
 
         if(  currentTimeblockMoment < moment() && currentTimeblockMoment.clone().add(1, 'hours') < moment() ){
@@ -46,11 +46,12 @@ function renderCalendar() {
 
   //for loop to add id's to input areas
   function addIdToInput() {
-    let inputId = document.getElementsByClassName("toDo-input");
+    let inputId = document.getElementsByClassName("input-area");
     let length = inputId.length;
     for (i = 0; i < length; i++) {
       inputId[i].id = "input-area-" + (i + 1);
     }
+    console.log(inputId)
   };
   addIdToInput();
 
@@ -85,14 +86,13 @@ function renderCalendar() {
   let toDoInput9 = $("#input-area-9");
 
 
-  let storedInput;
-
   //click events for each save button 
 
   $(saveBtnId1).on("click", function (event) {
     event.preventDefault();
     let toDoInput1 = $("#input-area-1").val();
     localStorage.setItem("task1", (toDoInput1));
+    console.log($('#input-area-1'))
   });
   let savedInput1 = (localStorage.getItem("task1"));
   toDoInput1.val(savedInput1);
