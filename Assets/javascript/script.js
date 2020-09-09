@@ -91,74 +91,74 @@ function renderCalendar() {
 
   $(saveBtnId1).on("click", function (event) {
     event.preventDefault();
-    let toDoInput1 = $("#input-field-1").val().trim();
-    localStorage.setItem("toDo1", (toDoInput1));
+    let toDoInput1 = $("#input-area-1").val();
+    localStorage.setItem("task1", (toDoInput1));
   });
-  let savedInput1 = (localStorage.getItem("toDo1"));
+  let savedInput1 = (localStorage.getItem("task1"));
   toDoInput1.val(savedInput1);
 
   $(saveBtnId2).on("click", function (event) {
     event.preventDefault();
-    let toDoInput2 = $("#input-field-2").val().trim();
-    localStorage.setItem("toDo2", (toDoInput2));
+    let toDoInput2 = $("#input-area-2").val();
+    localStorage.setItem("task2", (toDoInput2));
   });
-  let savedInput2 = (localStorage.getItem("toDo2"));
+  let savedInput2 = (localStorage.getItem("task2"));
   toDoInput2.val(savedInput2);
 
   $(saveBtnId3).on("click", function (event) {
     event.preventDefault();
-    let toDoInput3 = $("#input-field-3").val().trim();
-    localStorage.setItem("toDo3", (toDoInput3));
+    let toDoInput3 = $("#input-area-3").val();
+    localStorage.setItem("task3", (toDoInput3));
   });
-  let savedInput3 = (localStorage.getItem("toDo3"));
+  let savedInput3 = (localStorage.getItem("task3"));
   toDoInput3.val(savedInput3);
 
   $(saveBtnId4).on("click", function (event) {
     event.preventDefault();
-    let toDoInput4 = $("#input-field-4").val().trim();
-    localStorage.setItem("toDo4", (toDoInput4));
+    let toDoInput4 = $("#input-area-4").val();
+    localStorage.setItem("task4", (toDoInput4));
   });
-  let savedInput4 = (localStorage.getItem("toDo4"));
+  let savedInput4 = (localStorage.getItem("task4"));
   toDoInput4.val(savedInput4);
 
   $(saveBtnId5).on("click", function (event) {
     event.preventDefault();
-    let toDoInput5 = $("#input-field-5").val().trim();
-    localStorage.setItem("toDo5", (toDoInput5));
+    let toDoInput5 = $("#input-area-5").val();
+    localStorage.setItem("task5", (toDoInput5));
   });
-  let savedInput5 = (localStorage.getItem("toDo5"));
+  let savedInput5 = (localStorage.getItem("task5"));
   toDoInput5.val(savedInput5);
 
   $(saveBtnId6).on("click", function (event) {
     event.preventDefault();
-    let toDoInput6 = $("#input-field-6").val().trim();
-    localStorage.setItem("toDo6", (toDoInput6));
+    let toDoInput6 = $("#input-area-6").val();
+    localStorage.setItem("task6", (toDoInput6));
   });
-  let savedInput6 = (localStorage.getItem("toDo6"));
+  let savedInput6 = (localStorage.getItem("task6"));
   toDoInput6.val(savedInput6);
 
   $(saveBtnId7).on("click", function (event) {
     event.preventDefault();
-    let toDoInput7 = $("#input-field-7").val().trim();
-    localStorage.setItem("toDo7", (toDoInput7));
+    let toDoInput7 = $("#input-area-7").val();
+    localStorage.setItem("task7", (toDoInput7));
   });
-  let savedInput7 = (localStorage.getItem("toDo7"));
+  let savedInput7 = (localStorage.getItem("task7"));
   toDoInput7.val(savedInput7);
 
   $(saveBtnId8).on("click", function (event) {
     event.preventDefault();
-    let toDoInput8 = $("#input-field-8").val().trim();
-    localStorage.setItem("toDo8", (toDoInput8));
+    let toDoInput8 = $("#input-area-8").val();
+    localStorage.setItem("task8", (toDoInput8));
   });
-  let savedInput8 = (localStorage.getItem("toDo8"));
+  let savedInput8 = (localStorage.getItem("task8"));
   toDoInput8.val(savedInput8);
 
   $(saveBtnId9).on("click", function (event) {
     event.preventDefault();
-    let toDoInput9 = $("#input-field-8").val().trim();
-    localStorage.setItem("toDo9", (toDoInput9));
+    let toDoInput9 = $("#input-area-9").val();
+    localStorage.setItem("task9", (toDoInput9));
   });
-  let savedInput9 = (localStorage.getItem("toDo9"));
+  let savedInput9 = (localStorage.getItem("task9"));
   toDoInput9.val(savedInput9);
 
   })}
